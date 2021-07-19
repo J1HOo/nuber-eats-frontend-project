@@ -1,3 +1,3 @@
 import React from "react";
 
-export const LoggedOutRouter = () => <span>Logged Out</span>;
+export const LoggedInRouter = () => <span>Logged In</span>;
