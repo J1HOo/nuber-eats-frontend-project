@@ -2,9 +2,10 @@ import { gql, useMutation } from "@apollo/client";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FormError } from "../components/form-error";
+import { loginMutation, loginMutationVariables, } from "../__generated__/loginMutation";
 
 const LOGIN_MUTATION = gql`
-  mutation PotatoMutation($email: String!, $password: String!) {
+  mutation loginMutation($email: String!, $password: String!) {
     login(input: { email: $email, password: $password }) {
       ok
       token
@@ -20,26 +21,29 @@ interface ILoginForm {
 
 export const Login = () => {
   const { register, getValues, errors, handleSubmit } = useForm<ILoginForm>();
-  const [loginMutation] = useMutation(LOGIN_MUTATION);
+  const [loginMutation, { data }] = useMutation<
+    loginMutation,
+    loginMutationVariables
+  >(LOGIN_MUTATION);
   const onSubmit = () => {
     const { email, password } = getValues();
     loginMutation({
       variables: {
         email,
-        password: 1234567890,
+        password,
       },
     });
   };
   return (
     <div className="h-screen flex items-center justify-center bg-gray-800">
       <div className="bg-white w-full max-w-lg pt-10 pb-7 rounded-lg text-center">
-        <h3 className="text-2xl text-gray-800">로그인</h3>
+        <h3 className="text-2xl text-gray-800">Log In</h3>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="grid gap-3 mt-5 px-5"
         >
           <input
-            ref={register({ required: "이메일을 입력해 주세요." })}
+            ref={register({ required: "Email is required" })}
             name="email"
             required
             type="email"
@@ -50,7 +54,7 @@ export const Login = () => {
             <FormError errorMessage={errors.email?.message} />
           )}
           <input
-            ref={register({ required: "패스워드를 입력해 주세요." })}
+            ref={register({ required: "Password is required" })}
             required
             name="password"
             type="password"
@@ -61,9 +65,9 @@ export const Login = () => {
             <FormError errorMessage={errors.password?.message} />
           )}
           {errors.password?.type === "minLength" && (
-            <FormError errorMessage="비밀번호는 10자 이상 입력하어야 합니다." />
+            <FormError errorMessage="Password must be more than 10 chars." />
           )}
-          <button className="mt-3 btn">로그인</button>
+          <button className="mt-3 btn">Log In</button>
         </form>
       </div>
     </div>

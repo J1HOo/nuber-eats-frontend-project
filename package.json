@@ -25,8 +25,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "tailwind:build": "tailwind build ./src/styles/tailwind.css -o ./src/styles/styles.css",
+    "tailwind:build": "tailwind build -i ./src/styles/tailwind.css -o ./src/styles/styles.css",
     "start": "npm run tailwind:build & react-scripts start",
+    "apollo:codegen": "apollo client:codegen src/__generated__ --target=typescript --outputFlat",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -51,5 +52,8 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.8"
+  },
+  "resolutions": {
+    "graphql": "^15"
   }
 }

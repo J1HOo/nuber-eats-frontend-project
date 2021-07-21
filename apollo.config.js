@@ -1,5 +1,10 @@
 module.exports = {
-    client: {
-      service: "my-graphql-app"
-    }
-  };
+  client: {
+    includes: ["./src/**/*.tsx"],
+    tagName: "gql",
+    service: {
+      name: "nuber-eats-backend-project",
+      url: "http://localhost:4000/graphql",
+    },
+  },
+};
