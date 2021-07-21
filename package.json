@@ -31,7 +31,8 @@
     "apollo:codegen": " rimraf src/__generated__ && apollo client:codegen src/__generated__ --target=typescript --outputFlat",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "preinstall": "npx npm-force-resolutions"
   },
   "eslintConfig": {
     "extends": [
@@ -52,7 +53,8 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.8"
+    "@types/react-router-dom": "^5.1.8",
+    "npm-force-resolutions": "^0.0.10"
   },
   "resolutions": {
     "graphql": "^15"
