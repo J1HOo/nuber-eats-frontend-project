@@ -6,9 +6,11 @@ import { Link, useHistory } from "react-router-dom";
 import { Button } from "../components/button";
 import { FormError } from "../components/form-error";
 import nuberLogo from "../images/logo.svg";
-import { createAccountMutationVariables, createAccountMutation, } from "../__generated__/createAccountMutation";
+import {
+  createAccountMutation,
+  createAccountMutationVariables,
+} from "../__generated__/createAccountMutation";
 import { UserRole } from "../__generated__/globalTypes";
-
 
 const CREATE_ACCOUNT_MUTATION = gql`
   mutation createAccountMutation($createAccountInput: CreateAccountInput!) {
@@ -84,7 +86,7 @@ export const CreateAccount = () => {
           <input
             ref={register({
               required: "Email is required",
-              pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
             name="email"
             required
@@ -126,7 +128,7 @@ export const CreateAccount = () => {
             loading={loading}
             actionText={"Create Account"}
           />
-            {createAccountMutationResult?.createAccount.error && (
+          {createAccountMutationResult?.createAccount.error && (
             <FormError
               errorMessage={createAccountMutationResult.createAccount.error}
             />

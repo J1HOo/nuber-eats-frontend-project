@@ -1,13 +1,16 @@
 import { gql, useMutation } from "@apollo/client";
 import React from "react";
+import Helmet from "react-helmet";
 import { useForm } from "react-hook-form";
-import { FormError } from "../components/form-error";
-import { loginMutation, loginMutationVariables, } from "../__generated__/loginMutation";
-import nuberLogo from "../images/logo.svg";
-import { Button } from "../components/button";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import { isLoggedInVar } from "../apollo";
+import { Button } from "../components/button";
+import { FormError } from "../components/form-error";
+import nuberLogo from "../images/logo.svg";
+import {
+  loginMutation,
+  loginMutationVariables,
+} from "../__generated__/loginMutation";
 
 const LOGIN_MUTATION = gql`
   mutation loginMutation($loginInput: LoginInput!) {
@@ -46,9 +49,9 @@ export const Login = () => {
   const [loginMutation, { data: loginMutationResult, loading }] = useMutation<
     loginMutation,
     loginMutationVariables
-    >(LOGIN_MUTATION, {
-      onCompleted,
-    });
+  >(LOGIN_MUTATION, {
+    onCompleted,
+  });
   const onSubmit = () => {
     if (!loading) {
       const { email, password } = getValues();
@@ -57,14 +60,14 @@ export const Login = () => {
           loginInput: {
             email,
             password,
-          },  
-        }
-    });
-   }
+          },
+        },
+      });
+    }
   };
   return (
     <div className="h-screen flex items-center flex-col mt-10 lg:mt-28">
-       <Helmet>
+      <Helmet>
         <title>Login | Nuber Eats</title>
       </Helmet>
       <div className="w-full max-w-screen-sm flex flex-col px-5 items-center">
@@ -79,7 +82,7 @@ export const Login = () => {
           <input
             ref={register({
               required: "Email is required",
-              pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
             name="email"
             required
