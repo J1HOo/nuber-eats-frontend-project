@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Redirect, Route } from "react-router-dom";
 import { Header } from "../components/header";
 import { useMe } from "../hooks/useMe";
-import { Restaurants } from "../pages/Client/restaurants";
+import { Restaurants } from "../pages/client/restaurants";
 import { ConfirmEmail } from "../pages/user/confirm-email";
 import { EditProfile } from "../pages/user/edit-profile";
 
