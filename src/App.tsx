@@ -3,7 +3,6 @@ import React from "react";
 import { isLoggedInVar } from "./apollo";
 import { LoggedInRouter } from "./router/logged-in-router";
 import { LoggedOutRouter } from "./router/logged-out-router";
-import "tailwindcss/tailwind.css";
 
 function App() {
   const isLoggedIn = useReactiveVar(isLoggedInVar);

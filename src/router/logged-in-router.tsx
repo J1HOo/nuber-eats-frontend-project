@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Redirect, Route } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import { Header } from "../components/header";
 import { useMe } from "../hooks/useMe";
 import { Restaurants } from "../pages/client/restaurants";
@@ -10,10 +10,10 @@ const ClientRoutes = [
   <Route key={1} path="/" exact>
     <Restaurants />
   </Route>,
-    <Route key={2} path="/confirm" exact>
+  <Route key={2} path="/confirm" exact>
     <ConfirmEmail />
   </Route>,
-    <Route key={3} path="/edit-profile" exact>
+  <Route key={3} path="/edit-profile" exact>
     <EditProfile />
   </Route>,
 ];
