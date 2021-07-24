@@ -3,14 +3,17 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { LOCALSTORAGE_TOKEN } from "../constants";
 import { authTokenVar, isLoggedInVar } from "../apollo";
 import { Button } from "../components/button";
 import { FormError } from "../components/form-error";
+import { LOCALSTORAGE_TOKEN } from "../constants";
 import nuberLogo from "../images/logo.svg";
-import { loginMutation, loginMutationVariables } from "../__generated__/loginMutation";
+import {
+  loginMutation,
+  loginMutationVariables,
+} from "../__generated__/loginMutation";
 
-const LOGIN_MUTATION = gql`
+export const LOGIN_MUTATION = gql`
   mutation loginMutation($loginInput: LoginInput!) {
     login(input: $loginInput) {
       ok
@@ -89,11 +92,11 @@ export const Login = () => {
             placeholder="Email"
             className="input"
           />
-          {errors.email?.message && (
-            <FormError errorMessage={errors.email?.message} />
-          )}
           {errors.email?.type === "pattern" && (
             <FormError errorMessage={"Please enter a valid email"} />
+          )}
+          {errors.email?.message && (
+            <FormError errorMessage={errors.email?.message} />
           )}
           <input
             ref={register({ required: "Password is required" })}
@@ -105,9 +108,6 @@ export const Login = () => {
           />
           {errors.password?.message && (
             <FormError errorMessage={errors.password?.message} />
-          )}
-          {errors.password?.type === "minLength" && (
-            <FormError errorMessage="Password must be more than 10 chars." />
           )}
           <Button
             canClick={formState.isValid}

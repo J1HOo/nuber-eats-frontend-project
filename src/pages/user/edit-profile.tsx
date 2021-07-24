@@ -1,10 +1,13 @@
 import { gql, useApolloClient, useMutation } from "@apollo/client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { Button } from "../../components/button";
 import { useMe } from "../../hooks/useMe";
-import { editProfile, editProfileVariables } from "../../__generated__/editProfile";
+import {
+  editProfile,
+  editProfileVariables,
+} from "../../__generated__/editProfile";
 
 const EDIT_PROFILE_MUTATION = gql`
   mutation editProfile($input: EditProfileInput!) {
@@ -27,7 +30,7 @@ export const EditProfile = () => {
     const {
       editProfile: { ok },
     } = data;
-   if (ok && userData) {
+    if (ok && userData) {
       const {
         me: { email: prevEmail, id },
       } = userData;

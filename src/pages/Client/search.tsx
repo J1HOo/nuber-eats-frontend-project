@@ -3,7 +3,10 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useHistory, useLocation } from "react-router-dom";
 import { RESTAURANT_FRAGMENT } from "../../fragments";
-import { searchRestaurant, searchRestaurantVariables } from "../../__generated__/searchRestaurant";
+import {
+  searchRestaurant,
+  searchRestaurantVariables,
+} from "../../__generated__/searchRestaurant";
 
 const SEARCH_RESTAURANT = gql`
   query searchRestaurant($input: SearchRestaurantInput!) {

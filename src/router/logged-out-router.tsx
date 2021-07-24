@@ -7,12 +7,12 @@ import { Login } from "../pages/login";
 export const LoggedOutRouter = () => {
   return (
     <Router>
-      <Switch> 
-          <Route path="/" exact>
-          <Login />
-        </Route>
+      <Switch>
         <Route path="/create-account">
           <CreateAccount />
+        </Route>
+        <Route path="/" exact>
+          <Login />
         </Route>
         <Route>
           <NotFound />
