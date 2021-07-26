@@ -1,0 +1,1412 @@
+node:internal/process/promises:245
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+CssSyntaxError: /Users/parkjiho/Workspace/nuber-eats-frontend/src/styles/tailwind.css:13:10: The `text-lime-600` class does not exist, but `text-blue-600` does. If you're sure that `text-lime-600` exists, make sure that any `@import` statements are being properly processed before Tailwind CSS sees your CSS, as `@apply` can only be used for classes in the same CSS tree.
+    at /Users/parkjiho/Workspace/nuber-eats-frontend/src/styles/tailwind.css:13:3
+    at Input.error (/Users/parkjiho/Workspace/nuber-eats-frontend/node_modules/tailwindcss/peers/index.js:61185:16)
+    at AtRule.error (/Users/parkjiho/Workspace/nuber-eats-frontend/node_modules/tailwindcss/peers/index.js:62274:32)
+    at /Users/parkjiho/Workspace/nuber-eats-frontend/node_modules/tailwindcss/lib/lib/substituteClassApplyAtRules.js:240:20
+    at Array.forEach (<anonymous>)
+    at extractUtilityRules (/Users/parkjiho/Workspace/nuber-eats-frontend/node_modules/tailwindcss/lib/lib/substituteClassApplyAtRules.js:226:18)
+    at /Users/parkjiho/Workspace/nuber-eats-frontend/node_modules/tailwindcss/lib/lib/substituteClassApplyAtRules.js:290:22
+    at /Users/parkjiho/Workspace/nuber-eats-frontend/node_modules/tailwindcss/peers/index.js:60519:16
+    at /Users/parkjiho/Workspace/nuber-eats-frontend/node_modules/tailwindcss/peers/index.js:60442:18
+    at Rule.each (/Users/parkjiho/Workspace/nuber-eats-frontend/node_modules/tailwindcss/peers/index.js:60428:16)
+    at Rule.walk (/Users/parkjiho/Workspace/nuber-eats-frontend/node_modules/tailwindcss/peers/index.js:60439:17) {
+  reason: "The `text-lime-600` class does not exist, but `text-blue-600` does. If you're sure that `text-lime-600` exists, make sure that any `@import` statements are being properly processed before Tailwind CSS sees your CSS, as `@apply` can only be used for classes in the same CSS tree.",
+  file: '/Users/parkjiho/Workspace/nuber-eats-frontend/src/styles/tailwind.css',
+  source: '@tailwind base;\n' +
+    '@tailwind components;\n' +
+    '\n' +
+    '.input {\n' +
+    '  @apply focus:outline-none focus:border-gray-500 p-3 border-2  text-lg border-gray-200 transition-colors;\n' +
+    '}\n' +
+    '\n' +
+    '.container {\n' +
+    '  @apply max-w-screen-2xl mx-auto;\n' +
+    '}\n' +
+    '\n' +
+    '.link {\n' +
+    '  @apply text-lime-600 hover:underline;\n' +
+    '}\n' +
+    '\n' +
+    '@tailwind utilities;',
+  line: 13,
+  column: 10,
+  input: {
+    line: 13,
+    column: 10,
+    source: '@tailwind base;\n' +
+      '@tailwind components;\n' +
+      '\n' +
+      '.input {\n' +
+      '  @apply focus:outline-none focus:border-gray-500 p-3 border-2  text-lg border-gray-200 transition-colors;\n' +
+      '}\n' +
+      '\n' +
+      '.container {\n' +
+      '  @apply max-w-screen-2xl mx-auto;\n' +
+      '}\n' +
+      '\n' +
+      '.link {\n' +
+      '  @apply text-lime-600 hover:underline;\n' +
+      '}\n' +
+      '\n' +
+      '@tailwind utilities;',
+    url: 'file:///Users/parkjiho/Workspace/nuber-eats-frontend/src/styles/tailwind.css',
+    file: '/Users/parkjiho/Workspace/nuber-eats-frontend/src/styles/tailwind.css'
+  },
+  postcssNode: <ref *1> AtRule {
+    raws: { before: '\n  ', between: '', afterName: ' ' },
+    type: 'atrule',
+    name: 'apply',
+    parent: Rule {
+      raws: { before: '\n\n', between: ' ', semicolon: true, after: '\n' },
+      type: 'rule',
+      nodes: [ [Circular *1] ],
+      parent: <ref *2> Root {
+        raws: { semicolon: true, after: '' },
+        type: 'root',
+        nodes: [
+          AtRule {
+            raws: [Object],
+            type: 'atrule',
+            name: 'tailwind',
+            parent: [Circular *2],
+            source: [Object],
+            params: 'base',
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(isClean)]: false
+          },
+          Comment {
+            raws: [Object],
+            text: 'tailwind start base',
+            type: 'comment',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            text: '! tailwindcss v2.2.6 | MIT License | https://tailwindcss.com',
+            parent: [Circular *2],
+            source: [Object],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: 'Document\n========',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nUse a better box model (opinionated).',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: '*,\n::before,\n::after',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nUse a more readable tab size (opinionated).',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'html',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              '1. Correct the line height in all browsers.\n' +
+              '2. Prevent adjustments of font size after orientation changes in iOS.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'html',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: 'Sections\n========',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nRemove the margin in all browsers.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'body',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              'Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'body',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: 'Grouping content\n================',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              '1. Add the correct height in Firefox.\n' +
+              '2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'hr',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: 'Text-level semantics\n====================',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nAdd the correct text decoration in Chrome, Edge, and Safari.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'abbr[title]',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nAdd the correct font weight in Edge and Safari.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'b,\nstrong',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              '1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)\n' +
+              "2. Correct the odd 'em' font sizing in all browsers.",
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'code,\nkbd,\nsamp,\npre',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nAdd the correct font size in all browsers.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'small',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              "Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.",
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'sub,\nsup',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'sub',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'sup',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: 'Tabular data\n============',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              '1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)\n' +
+              '2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'table',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: 'Forms\n=====',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              '1. Change the font styles in all browsers.\n' +
+              '2. Remove the margin in Firefox and Safari.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'button,\ninput,\noptgroup,\nselect,\ntextarea',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              'Remove the inheritance of text transform in Edge and Firefox.\n' +
+              '1. Remove the inheritance of text transform in Firefox.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'button,\nselect',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              'Correct the inability to style clickable types in iOS and Safari.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: "button,\n[type='button'],\n[type='reset'],\n[type='submit']",
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nRemove the inner border and padding in Firefox.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: '::-moz-focus-inner',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nRestore the focus styles unset by the previous rule.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: ':-moz-focusring',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              "Remove the additional ':invalid' styles in Firefox.\n" +
+              'See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: ':-moz-ui-invalid',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              "Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.",
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'legend',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nAdd the correct vertical alignment in Chrome and Firefox.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'progress',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              'Correct the cursor style of increment and decrement buttons in Safari.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: '::-webkit-inner-spin-button,\n::-webkit-outer-spin-button',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              '1. Correct the odd appearance in Chrome and Safari.\n' +
+              '2. Correct the outline style in Safari.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: "[type='search']",
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\nRemove the inner padding in Chrome and Safari on macOS.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: '::-webkit-search-decoration',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              '1. Correct the inability to style clickable types in iOS and Safari.\n' +
+              "2. Change font properties to 'inherit' in Safari.",
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: '::-webkit-file-upload-button',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: 'Interactive\n===========',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: 'Add the correct display in Chrome and Safari.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'summary',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              ' * Manually forked from SUIT CSS Base: https://github.com/suitcss/base\n' +
+              ' * A thin layer on top of normalize.css that provides a starting point more\n' +
+              ' * suitable for web applications.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              ' * Removes the default spacing and border for appropriate elements.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'blockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'button',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'fieldset',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'ol,\nul',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n * Tailwind custom reset styles',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              " * 1. Use the user's configured `sans` font-family (with Tailwind's default\n" +
+              ' *    sans-serif font stack as a fallback) as a sane default.\n' +
+              ` * 2. Use Tailwind's default "normal" line-height so the user isn't forced\n` +
+              ' *    to override it to ensure consistency even when using the default theme.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'html',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              ' * Inherit font-family and line-height from `html` so users can set them as\n' +
+              ' * a class directly on the `html` element.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'body',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              ' * 1. Prevent padding and border from affecting element width.\n' +
+              ' *\n' +
+              ' *    We used to set this in the html element and inherit from\n' +
+              ' *    the parent element for everything else. This caused issues\n' +
+              ' *    in shadow-dom-enhanced elements like <details> where the content\n' +
+              ' *    is wrapped by a div with box-sizing set to `content-box`.\n' +
+              ' *\n' +
+              ' *    https://github.com/mozdevs/cssremedy/issues/4\n' +
+              ' *\n' +
+              ' *\n' +
+              ' * 2. Allow adding a border to an element by just adding a border-width.\n' +
+              ' *\n' +
+              ' *    By default, the way the browser specifies that an element should have no\n' +
+              " *    border is by setting it's border-style to `none` in the user-agent\n" +
+              ' *    stylesheet.\n' +
+              ' *\n' +
+              ' *    In order to easily add borders to elements by just setting the `border-width`\n' +
+              ' *    property, we change the default border-style for all elements to `solid`, and\n' +
+              ' *    use border-width to hide them instead. This way our `border` utilities only\n' +
+              ' *    need to set the `border-width` property instead of the entire `border`\n' +
+              ' *    shorthand, making our border utilities much more straightforward to compose.\n' +
+              ' *\n' +
+              ' *    https://github.com/tailwindcss/tailwindcss/pull/116',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: '*,\n::before,\n::after',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '* Ensure horizontal rules are visible by default',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'hr',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              ' * Undo the `border-style: none` reset that Normalize applies to images so that\n' +
+              ' * our `border-{width}` utilities have the expected effect.\n' +
+              ' *\n' +
+              ' * The Normalize reset is unnecessary for us since we default the border-width\n' +
+              ' * to 0 on all elements.\n' +
+              ' *\n' +
+              ' * https://github.com/tailwindcss/tailwindcss/issues/362',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'img',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'textarea',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'input::placeholder,\ntextarea::placeholder',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'button,\n[role="button"]',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'table',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'h1,\nh2,\nh3,\nh4,\nh5,\nh6',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              ' * Reset links to optimize for opt-in styling instead of\n' +
+              ' * opt-out.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'a',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              ' * Reset form element properties that are easy to forget to\n' +
+              " * style explicitly so you don't inadvertently introduce\n" +
+              ' * styles that deviate from your design system. These styles\n' +
+              ' * supplement a partial reset that is already applied by\n' +
+              ' * normalize.css.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'button,\ninput,\noptgroup,\nselect,\ntextarea',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              " * Use the configured 'mono' font family for elements that\n" +
+              ' * are expected to be rendered with a monospace font, falling\n' +
+              ' * back to the system monospace stack if there is no configured\n' +
+              " * 'mono' font family.",
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'pre,\ncode,\nkbd,\nsamp',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              " * 1. Make replaced elements `display: block` by default as that's\n" +
+              ' *    the behavior you want almost all of the time. Inspired by\n' +
+              ' *    CSS Remedy, with `svg` added as well.\n' +
+              ' *\n' +
+              ' *    https://github.com/mozdevs/cssremedy/issues/14\n' +
+              ' * \n' +
+              ' * 2. Add `vertical-align: middle` to align replaced elements more\n' +
+              ' *    sensibly by default when overriding `display` by adding a\n' +
+              ' *    utility like `inline`.\n' +
+              ' *\n' +
+              ' *    This can trigger a poorly considered linting error in some\n' +
+              ' *    tools but is included by design.\n' +
+              ' * \n' +
+              ' *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'img,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              ' * Constrain images and videos to the parent width and preserve\n' +
+              ' * their intrinsic aspect ratio.\n' +
+              ' *\n' +
+              ' * https://github.com/mozdevs/cssremedy/issues/14',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: 'img,\nvideo',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            type: 'comment',
+            source: [Object],
+            text: '*\n' +
+              ' * Ensure the default browser behavior of the `hidden` attribute.',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            source: [Object],
+            selector: '[hidden]',
+            parent: [Circular *2],
+            lastEach: 15,
+            indexes: {},
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            text: 'tailwind end base',
+            type: 'comment',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Comment {
+            raws: [Object],
+            text: 'tailwind start base',
+            type: 'comment',
+            parent: [Circular *2],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            selector: '*, ::before, ::after',
+            lastEach: 17,
+            indexes: {},
+            parent: [Circular *2],
+            source: [Object],
+            [Symbol(isClean)]: false,
+            [Symbol(my)]: true,
+            [Symbol(my)]: true
+          },
+          ... 6949 more items
+        ],
+        source: {
+          input: Input {
+            css: '@tailwind base;\n' +
+              '@tailwind components;\n' +
+              '\n' +
+              '.input {\n' +
+              '  @apply focus:outline-none focus:border-gray-500 p-3 border-2  text-lg border-gray-200 transition-colors;\n' +
+              '}\n' +
+              '\n' +
+              '.container {\n' +
+              '  @apply max-w-screen-2xl mx-auto;\n' +
+              '}\n' +
+              '\n' +
+              '.link {\n' +
+              '  @apply text-lime-600 hover:underline;\n' +
+              '}\n' +
+              '\n' +
+              '@tailwind utilities;',
+            hasBOM: false,
+            file: '/Users/parkjiho/Workspace/nuber-eats-frontend/src/styles/tailwind.css',
+            [Symbol(fromOffsetCache)]: [Array]
+          },
+          start: { offset: 0, line: 1, column: 1 }
+        },
+        lastEach: 16,
+        indexes: { '16': 116 },
+        [Symbol(isClean)]: false,
+        [Symbol(my)]: true,
+        [Symbol(isClean)]: false
+      },
+      source: {
+        start: { offset: 209, line: 12, column: 1 },
+        input: Input {
+          css: '@tailwind base;\n' +
+            '@tailwind components;\n' +
+            '\n' +
+            '.input {\n' +
+            '  @apply focus:outline-none focus:border-gray-500 p-3 border-2  text-lg border-gray-200 transition-colors;\n' +
+            '}\n' +
+            '\n' +
+            '.container {\n' +
+            '  @apply max-w-screen-2xl mx-auto;\n' +
+            '}\n' +
+            '\n' +
+            '.link {\n' +
+            '  @apply text-lime-600 hover:underline;\n' +
+            '}\n' +
+            '\n' +
+            '@tailwind utilities;',
+          hasBOM: false,
+          file: '/Users/parkjiho/Workspace/nuber-eats-frontend/src/styles/tailwind.css',
+          [Symbol(fromOffsetCache)]: [
+              0,  16,  38,  39,  48,
+            155, 157, 158, 171, 206,
+            208, 209, 217, 257, 259,
+            260
+          ]
+        },
+        end: { offset: 257, line: 14, column: 1 }
+      },
+      selector: '.link',
+      lastEach: 15,
+      indexes: { '15': 0 },
+      [Symbol(isClean)]: false,
+      [Symbol(my)]: true,
+      [Symbol(isClean)]: false
+    },
+    source: {
+      start: { offset: 219, line: 13, column: 3 },
+      input: Input {
+        css: '@tailwind base;\n' +
+          '@tailwind components;\n' +
+          '\n' +
+          '.input {\n' +
+          '  @apply focus:outline-none focus:border-gray-500 p-3 border-2  text-lg border-gray-200 transition-colors;\n' +
+          '}\n' +
+          '\n' +
+          '.container {\n' +
+          '  @apply max-w-screen-2xl mx-auto;\n' +
+          '}\n' +
+          '\n' +
+          '.link {\n' +
+          '  @apply text-lime-600 hover:underline;\n' +
+          '}\n' +
+          '\n' +
+          '@tailwind utilities;',
+        hasBOM: false,
+        file: '/Users/parkjiho/Workspace/nuber-eats-frontend/src/styles/tailwind.css',
+        [Symbol(fromOffsetCache)]: [
+            0,  16,  38,  39,  48,
+          155, 157, 158, 171, 206,
+          208, 209, 217, 257, 259,
+          260
+        ]
+      },
+      end: { offset: 255, line: 13, column: 39 }
+    },
+    params: 'text-lime-600 hover:underline',
+    [Symbol(isClean)]: false,
+    [Symbol(my)]: true,
+    [Symbol(isClean)]: false
+  },
+  plugin: undefined
+}
+[2K[1G[31merror[39m Command failed with exit code 1.
