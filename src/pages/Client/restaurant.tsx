@@ -54,19 +54,35 @@ export const Restaurant = () => {
   const triggerStartOrder = () => {
     setOrderStarted(true);
   };
+  const getItem = (dishId: number) => {
+    return orderItems.find((order) => order.dishId === dishId);
+  };
   const isSelected = (dishId: number) => {
-    return Boolean(orderItems.find((order) => order.dishId === dishId));
+    return Boolean(getItem(dishId));
   };
   const addItemToOrder = (dishId: number) => {
     if (isSelected(dishId)) {
       return;
     }
-    setOrderItems((current) => [{ dishId }, ...current]);
+    setOrderItems((current) => [{ dishId, options: [] }, ...current]);
   };
   const removeFromOrder = (dishId: number) => {
     setOrderItems((current) =>
       current.filter((dish) => dish.dishId !== dishId)
     );
+  };
+  const addOptionToItem = (dishId: number, option: any) => {
+    if (!isSelected(dishId)) {
+      return;
+    }
+    const oldItem = getItem(dishId);
+    if (oldItem) {
+      removeFromOrder(dishId);
+      setOrderItems((current) => [
+        { dishId, options: [option, ...oldItem.options!] },
+        ...current,
+      ]);
+    }
   };
   console.log(orderItems);
   return (
@@ -97,15 +113,18 @@ export const Restaurant = () => {
         <div className="w-full grid mt-16 md:grid-cols-3 gap-x-5 gap-y-10">
           {data?.restaurant.restaurant?.menu.map((dish, index) => (
             <Dish
-              id={dish.id}
-              orderStarted={orderStarted}
-              key={index}
-              name={dish.name}
-              description={dish.description}
-              price={dish.price}
-              isCustomer={true}
-              options={dish.options}
-              addItemToOrder={addItemToOrder}
+            isSelected={isSelected(dish.id)}
+            id={dish.id}
+            orderStarted={orderStarted}
+            key={index}
+            name={dish.name}
+            description={dish.description}
+            price={dish.price}
+            isCustomer={true}
+            options={dish.options}
+            addItemToOrder={addItemToOrder}
+            removeFromOrder={removeFromOrder}
+            addOptionToItem={addOptionToItem}
             />
           ))}
         </div>
