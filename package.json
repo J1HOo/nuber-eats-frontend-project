@@ -30,6 +30,7 @@
     "react-scripts": "4.0.3",
     "rimraf": "^3.0.2",
     "shallowequal": "^1.1.0",
+    "subscriptions-transport-ws": "^0.9.19",
     "tailwindcss": "^2.2.6",
     "typescript": "^4.3.5",
     "victory": "^35.9.3",
