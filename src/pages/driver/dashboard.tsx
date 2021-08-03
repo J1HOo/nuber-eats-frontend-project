@@ -57,15 +57,6 @@ export const Dashboard = () => {
     useEffect(() => {
         if (map && maps) {
             map.panTo(new google.maps.LatLng(driverCoords.lat, driverCoords.lng));
-            /* const geocoder = new google.maps.Geocoder();
-            geocoder.geocode(
-              {
-                location: new google.maps.LatLng(driverCoords.lat, driverCoords.lng),
-              },
-              (results, status) => {
-                console.log(status, results);
-              }
-            ); */
         }
       }, [driverCoords.lat, driverCoords.lng]);
     const onApiLoaded = ({ map, maps }: { map: any; maps: any }) => {
@@ -150,7 +141,7 @@ export const Dashboard = () => {
             lat: 36.58,
             lng: 125.95,
           }}
-          bootstrapURLKeys={{ key: "AIzaSyDBoOMuQsFzQJJ-UAxEItgE3K3-JfH7opA" }}
+          bootstrapURLKeys={{ key: "AIzaSyAvOR6cFL4NEFQqWlf-li_Rmt__DJc0Wm8" }}
           ></GoogleMapReact>
       </div>
       <div className=" max-w-screen-sm mx-auto bg-white relative -top-10 shadow-lg py-8 px-5">

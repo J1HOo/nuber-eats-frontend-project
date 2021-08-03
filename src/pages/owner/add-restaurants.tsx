@@ -97,7 +97,9 @@ export const AddRestaurant = () => {
           },
         },
       });
-    } catch (e) {}
+    } catch (e) {
+      console.error(e)
+    }
   };
   return (
     <div className="container flex flex-col items-center mt-52">
