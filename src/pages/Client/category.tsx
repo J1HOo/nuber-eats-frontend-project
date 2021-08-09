@@ -4,7 +4,6 @@ import { useLocation, useParams } from "react-router-dom";
 import { CATEGORY_FRAGMENT, RESTAURANT_FRAGMENT } from "../../fragments";
 import { category, categoryVariables } from "../../__generated__/category";
 
-
 const CATEGORY_QUERY = gql`
   query category($input: CategoryInput!) {
     category(input: $input) {
@@ -41,5 +40,5 @@ export const Category = () => {
       },
     }
   );
-  return <h1>Category</h1>;
+  return <h1>카테고리 페이지(미구현)</h1>;
 };

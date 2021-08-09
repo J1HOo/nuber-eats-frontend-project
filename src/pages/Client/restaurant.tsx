@@ -149,10 +149,10 @@ export const Restaurant = () => {
       return;
     }
     if (orderItems.length === 0) {
-      alert("Can't place empty order");
+      alert("선택된 메뉴가 존재하지 않습니다.");
       return;
     }
-    const ok = window.confirm("You are about to place an order");
+    const ok = window.confirm("주문을 게속해서 진행하시겠습니까?");
     if (ok) {
       createOrderMutation({
         variables: {
@@ -187,20 +187,20 @@ export const Restaurant = () => {
       </div>
       <div className="container pb-32 flex flex-col items-end mt-20">
       {!orderStarted && (
-          <button onClick={triggerStartOrder} className="btn px-10">
-            Start Order
+          <button onClick={triggerStartOrder} className="cursor-pointer text-white bg-lime-700 py-3 px-10">
+            주문하기
           </button>
         )}
         {orderStarted && (
           <div className="flex items-center">
-            <button onClick={triggerConfirmOrder} className="btn px-10 mr-3">
-              Confirm Order
+            <button onClick={triggerConfirmOrder} className=" mr-8 cursor-pointer text-white bg-lime-700 py-3 px-10 ">
+              선택 완료
             </button>
             <button
               onClick={triggerCancelOrder}
-              className="btn px-10 bg-black hover:bg-black"
+              className=" text-white bg-gray-800 py-3 px-10"
             >
-              Cancel Order
+              주문 취소
             </button>
           </div>
         )}

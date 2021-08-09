@@ -46,7 +46,7 @@ export const CreateAccount = () => {
       createAccount: { ok },
     } = data;
     if (ok) {
-      alert("Account Created! Log in now!");
+      alert("계정생성에 성공하셨습니다!");
       history.push("/");
     }
   };
@@ -78,7 +78,7 @@ export const CreateAccount = () => {
       <div className="w-full max-w-screen-sm flex flex-col px-5 items-center">
         <img src={nuberLogo} className="w-52 mb-10" alt="Nuber Eats" />
         <h4 className="w-full font-medium text-left text-3xl mb-5">
-          Let's get started
+          지금 시작하기
         </h4>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -92,21 +92,21 @@ export const CreateAccount = () => {
             name="email"
             required
             type="email"
-            placeholder="Email"
+            placeholder="이메일"
             className="input"
           />
           {errors.email?.message && (
             <FormError errorMessage={errors.email?.message} />
           )}
           {errors.email?.type === "pattern" && (
-            <FormError errorMessage={"Please enter a valid email"} />
+            <FormError errorMessage={"이메일 인증을 완료해주세요."} />
           )}
           <input
-            ref={register({ required: "Password is required" })}
+            ref={register({ required: "'비밀번호'는 필수입력 사항압니다." })}
             required
             name="password"
             type="password"
-            placeholder="Password"
+            placeholder="비밀번호"
             className="input"
           />
           {errors.password?.message && (
@@ -124,7 +124,7 @@ export const CreateAccount = () => {
           <Button
             canClick={formState.isValid}
             loading={loading}
-            actionText={"Create Account"}
+            actionText={"계정생성하기"}
           />
           {createAccountMutationResult?.createAccount.error && (
             <FormError
@@ -135,7 +135,7 @@ export const CreateAccount = () => {
         <div>
           Already have an account?{" "}
           <Link to="/" className="text-lime-600 hover:underline">
-            Log in now
+            로그인하기
           </Link>
         </div>
       </div>

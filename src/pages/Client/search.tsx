@@ -50,7 +50,7 @@ export const Search = () => {
       <Helmet>
         <title>Search | Nuber Eats</title>
       </Helmet>
-      <h1>Search page</h1>
+      <h1>검색결과 페이지(미구현)</h1>
     </div>
   );
 };

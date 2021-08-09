@@ -75,7 +75,7 @@ export const Login = () => {
       <div className="w-full max-w-screen-sm flex flex-col px-5 items-center">
         <img src={nuberLogo} className="w-52 mb-10" alt="Nuber Eats" />
         <h4 className="w-full font-medium text-left text-3xl mb-5">
-          Welcome back
+          환영합니다
         </h4>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -83,27 +83,27 @@ export const Login = () => {
         >
           <input
             ref={register({
-              required: "Email is required",
+              required: "'이메일'은 필수입력 사항압니다.",
               pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
             name="email"
             required
             type="email"
-            placeholder="Email"
+            placeholder="이메일"
             className="input"
           />
           {errors.email?.type === "pattern" && (
-            <FormError errorMessage={"Please enter a valid email"} />
+            <FormError errorMessage={"'이메일'은 필수입력 사항입니다."} />
           )}
           {errors.email?.message && (
             <FormError errorMessage={errors.email?.message} />
           )}
           <input
-            ref={register({ required: "Password is required" })}
+            ref={register({ required: "'비밀번호'는 필수입력 사항입니다." })}
             required
             name="password"
             type="password"
-            placeholder="Password"
+            placeholder="비밀번호"
             className="input"
           />
           {errors.password?.message && (
@@ -112,7 +112,7 @@ export const Login = () => {
           <Button
             canClick={formState.isValid}
             loading={loading}
-            actionText={"Log in"}
+            actionText={"로그인"}
           />
           {loginMutationResult?.login.error && (
             <FormError errorMessage={loginMutationResult.login.error} />
@@ -121,7 +121,7 @@ export const Login = () => {
         <div>
           New to Nuber?{" "}
           <Link to="/create-account" className="text-lime-600 hover:underline">
-            Create an Account
+            계정생성하기
           </Link>
         </div>
       </div>

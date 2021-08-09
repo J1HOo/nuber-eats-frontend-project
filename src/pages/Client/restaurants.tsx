@@ -75,7 +75,7 @@ export const Restaurants = () => {
           name="searchTerm"
           type="Search"
           className="input rounded-md border-0 w-3/4 md:w-3/12"
-          placeholder="Search restaurants..."
+          placeholder="레스토랑 찾기"
         />
       </form>
       {!loading && (
@@ -118,7 +118,7 @@ export const Restaurants = () => {
               <div></div>
             )}
             <span>
-              Page {page} of {data?.restaurants.totalPages}
+              목록 {page} of {data?.restaurants.totalPages}
             </span>
             {page !== data?.restaurants.totalPages ? (
               <button

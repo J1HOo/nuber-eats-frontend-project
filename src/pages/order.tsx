@@ -105,26 +105,26 @@ export const Order = () => {
       </Helmet>
       <div className="border border-gray-800 w-full max-w-screen-sm flex flex-col justify-center">
         <h4 className="bg-gray-800 w-full py-5 text-white text-center text-xl">
-          Order #{params.id}
+          주문#{params.id}
         </h4>
         <h5 className="p-5 pt-10 text-3xl text-center ">
           ${data?.getOrder.order?.total}
         </h5>
         <div className="p-5 text-xl grid gap-6">
           <div className="border-t pt-5 border-gray-700">
-            Prepared By:{" "}
+            레스토랑:{" "}
             <span className="font-medium">
               {data?.getOrder.order?.restaurant?.name}
             </span>
           </div>
           <div className="border-t pt-5 border-gray-700 ">
-            Deliver To:{" "}
+            주문자:{" "}
             <span className="font-medium">
               {data?.getOrder.order?.customer?.email}
             </span>
           </div>
           <div className="border-t border-b py-5 border-gray-700">
-            Driver:{" "}
+            배달원:{" "}
             <span className="font-medium">
               {data?.getOrder.order?.driver?.email || "Not yet."}
             </span>
@@ -141,7 +141,7 @@ export const Order = () => {
                   onClick={() => onButtonClick(OrderStatus.Cooking)}
                   className="btn"
                 >
-                  Accept Order
+                  주문 수락
                 </button>
               )}
               {data?.getOrder.order?.status === OrderStatus.Cooking && (
@@ -149,7 +149,7 @@ export const Order = () => {
                   onClick={() => onButtonClick(OrderStatus.Cooked)}
                   className="btn"
                 >
-                  Order Cooked
+                  조리 시작
                 </button>
               )}
               {data?.getOrder.order?.status !== OrderStatus.Cooking &&
@@ -167,7 +167,7 @@ export const Order = () => {
                   onClick={() => onButtonClick(OrderStatus.PickedUp)}
                   className="btn"
                 >
-                  Picked Up
+                  음식 픽업
                 </button>
               )}
               {data?.getOrder.order?.status === OrderStatus.PickedUp && (
@@ -175,14 +175,14 @@ export const Order = () => {
                   onClick={() => onButtonClick(OrderStatus.Delivered)}
                   className="btn"
                 >
-                  Order Delivered
+                  배달 완료
                 </button>
               )}
             </>
           )}
           {data?.getOrder.order?.status === OrderStatus.Delivered && (
             <span className=" text-center mt-5 mb-3  text-2xl text-lime-600">
-              Thank you for using Nuber Eats
+              이용해주셔서 감사합니다.
             </span>
           )}
         </div>

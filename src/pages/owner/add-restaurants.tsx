@@ -2,11 +2,11 @@ import { gql, useApolloClient, useMutation } from "@apollo/client";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
 import { Button } from "../../components/button";
 import { FormError } from "../../components/form-error";
-import { createRestaurant, createRestaurantVariables } from "../../__generated__/createRestaurant";
 import { MY_RESTAURANTS_QUERY } from "./my-restaurants";
+import { createRestaurant, createRestaurantVariables } from "../../__generated__/createRestaurant";
+import { useHistory } from "react-router-dom";
 
 const CREATE_RESTAURANT_MUTATION = gql`
   mutation createRestaurant($input: CreateRestaurantInput!) {
@@ -66,10 +66,10 @@ export const AddRestaurant = () => {
   const [createRestaurantMutation, { data }] = useMutation<
     createRestaurant,
     createRestaurantVariables
-    >(CREATE_RESTAURANT_MUTATION, {
-      onCompleted,
-    });
-    const { register, getValues, formState, handleSubmit } = useForm<IFormProps>({
+  >(CREATE_RESTAURANT_MUTATION, {
+    onCompleted,
+  });
+  const { register, getValues, formState, handleSubmit } = useForm<IFormProps>({
     mode: "onChange",
   });
   const [uploading, setUploading] = useState(false);
@@ -97,39 +97,38 @@ export const AddRestaurant = () => {
           },
         },
       });
-    } catch (e) {
-      console.error(e)
-    }
+    } catch (e) {}
   };
   return (
     <div className="container flex flex-col items-center mt-52">
       <Helmet>
         <title>Add Restaurant | Nuber Eats</title>
       </Helmet>
-      <h4 className="font-semibold text-2xl mb-3">Add Restaurant</h4>
+      <h4 className="font-semibold text-2xl mb-3">레스토랑 추가하기</h4>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid max-w-screen-sm gap-3 mt-5 w-full mb-5">
+        className="grid max-w-screen-sm gap-3 mt-5 w-full mb-5"
+      >
         <input
           className="input"
           type="text"
           name="name"
-          placeholder="Name"
-          ref={register({ required: "Name is required." })}
+          placeholder="이름"
+          ref={register({ required: "이름'은 필수입력 사항입니다." })}
         />
         <input
           className="input"
           type="text"
           name="address"
-          placeholder="Address"
-          ref={register({ required: "Address is required." })}
+          placeholder="주소"
+          ref={register({ required: "주소'는 필수입력 사항입니다." })}
         />
         <input
           className="input"
           type="text"
           name="categoryName"
-          placeholder="Category Name"
-          ref={register({ required: "Category Name is required." })}
+          placeholder="카테고리 이름"
+          ref={register({ required: "카테고리'는 필수입력 사항입니다." })}
         />
         <div>
           <input
@@ -142,7 +141,7 @@ export const AddRestaurant = () => {
         <Button
           loading={uploading}
           canClick={formState.isValid}
-          actionText="Create Restaurant"
+          actionText="레스토랑 추가하기"
         />
         {data?.createRestaurant?.error && (
           <FormError errorMessage={data.createRestaurant.error} />

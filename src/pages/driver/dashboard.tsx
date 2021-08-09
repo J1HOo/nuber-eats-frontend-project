@@ -148,11 +148,10 @@ export const Dashboard = () => {
         {coockedOrdersData?.cookedOrders.restaurant ? (
           <>
             <h1 className="text-center  text-3xl font-medium">
-              New Coocked Order
+              배달요청이 들어왔습니다..
             </h1>
             <h1 className="text-center my-3 text-2xl font-medium">
-              Pick it up soon @{" "}
-              {coockedOrdersData?.cookedOrders.restaurant?.name}
+               @{" "}{coockedOrdersData?.cookedOrders.restaurant?.name}에서 음식을 받아주세요.
             </h1>
             <button
               onClick={() =>
@@ -160,12 +159,12 @@ export const Dashboard = () => {
               }
               className="btn w-full  block  text-center mt-5"
             >
-              Accept Challenge &rarr;
+              배달하겠습니다. &rarr;
             </button>
           </>
         ) : (
           <h1 className="text-center  text-3xl font-medium">
-            No orders yet...
+            준비된 배달이 없습니다.
           </h1>
         )}
       </div>
