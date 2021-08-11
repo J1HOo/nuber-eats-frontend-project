@@ -131,7 +131,7 @@ export const Order = () => {
           </div>
           {userData?.me.role === "Client" && (
             <span className=" text-center mt-5 mb-3  text-2xl text-lime-600">
-              Status: {data?.getOrder.order?.status}
+              상태: {data?.getOrder.order?.status}
             </span>
           )}
           {userData?.me.role === UserRole.Owner && (
@@ -139,7 +139,7 @@ export const Order = () => {
               {data?.getOrder.order?.status === OrderStatus.Pending && (
                 <button
                   onClick={() => onButtonClick(OrderStatus.Cooking)}
-                  className="btn"
+                  className=" cursor-pointer text-white bg-lime-700 py-3 px-10"
                 >
                   주문 수락
                 </button>
@@ -147,7 +147,7 @@ export const Order = () => {
               {data?.getOrder.order?.status === OrderStatus.Cooking && (
                 <button
                   onClick={() => onButtonClick(OrderStatus.Cooked)}
-                  className="btn"
+                  className=" cursor-pointer text-white bg-lime-700 py-3 px-10"
                 >
                   조리 시작
                 </button>
@@ -155,7 +155,7 @@ export const Order = () => {
               {data?.getOrder.order?.status !== OrderStatus.Cooking &&
                 data?.getOrder.order?.status !== OrderStatus.Pending && (
                   <span className=" text-center mt-5 mb-3  text-2xl text-lime-600">
-                    Status: {data?.getOrder.order?.status}
+                    상태: {data?.getOrder.order?.status}
                   </span>
                 )}
             </>
@@ -165,7 +165,7 @@ export const Order = () => {
               {data?.getOrder.order?.status === OrderStatus.Cooked && (
                 <button
                   onClick={() => onButtonClick(OrderStatus.PickedUp)}
-                  className="btn"
+                  className=" cursor-pointer text-white bg-lime-700 py-3 px-10"
                 >
                   음식 픽업
                 </button>
@@ -173,7 +173,7 @@ export const Order = () => {
               {data?.getOrder.order?.status === OrderStatus.PickedUp && (
                 <button
                   onClick={() => onButtonClick(OrderStatus.Delivered)}
-                  className="btn"
+                  className=" cursor-pointer text-white bg-lime-700 py-3 px-10"
                 >
                   배달 완료
                 </button>

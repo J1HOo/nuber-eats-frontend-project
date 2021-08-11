@@ -198,7 +198,7 @@ export const Restaurant = () => {
             </button>
             <button
               onClick={triggerCancelOrder}
-              className=" text-white bg-gray-800 py-3 px-10"
+              className=" text-white bg-black py-3 px-10"
             >
               주문 취소
             </button>

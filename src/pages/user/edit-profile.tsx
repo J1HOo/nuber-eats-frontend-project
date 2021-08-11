@@ -80,7 +80,7 @@ export const EditProfile = () => {
       <Helmet>
         <title>Edit Profile | Nuber Eats</title>
       </Helmet>
-      <h4 className="font-semibold text-2xl mb-3">Edit Profile</h4>
+      <h4 className="font-semibold text-2xl mb-3">계정 변경하기</h4>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="grid max-w-screen-sm gap-3 mt-5 w-full mb-5"
@@ -92,19 +92,19 @@ export const EditProfile = () => {
           name="email"
           className="input"
           type="email"
-          placeholder="Email"
+          placeholder="이메일"
         />
         <input
           ref={register}
           name="password"
           className="input"
           type="password"
-          placeholder="Password"
+          placeholder="비밀번호"
         />
         <Button
           loading={loading}
           canClick={formState.isValid}
-          actionText="Save Profile"
+          actionText="계정 변경하기"
         />
       </form>
     </div>
