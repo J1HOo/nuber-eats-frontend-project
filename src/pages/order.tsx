@@ -149,7 +149,7 @@ export const Order = () => {
                   onClick={() => onButtonClick(OrderStatus.Cooked)}
                   className=" cursor-pointer text-white bg-lime-700 py-3 px-10"
                 >
-                  조리 시작
+                  조리 완료
                 </button>
               )}
               {data?.getOrder.order?.status !== OrderStatus.Cooking &&

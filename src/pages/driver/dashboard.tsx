@@ -41,6 +41,7 @@ export const Dashboard = () => {
     const [driverCoords, setDriverCoords] = useState<ICoords>({ lng: 0, lat: 0 });
     const [map, setMap] = useState<google.maps.Map>();
     const [maps, setMaps] = useState<any>();
+
     // @ts-ignore
     const onSucces = ({ coords: { latitude, longitude } }: Position) => {
       setDriverCoords({ lat: latitude, lng: longitude });
@@ -138,8 +139,8 @@ export const Dashboard = () => {
           defaultZoom={16}
           draggable={true}
           defaultCenter={{
-            lat: 36.58,
-            lng: 125.95,
+            lat: 37.55164143858216,
+            lng: 126.95201289994903,
           }}
           bootstrapURLKeys={{ key: "AIzaSyAvOR6cFL4NEFQqWlf-li_Rmt__DJc0Wm8" }}
           ></GoogleMapReact>
